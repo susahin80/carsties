@@ -41,7 +41,6 @@ public static class Config
                 RedirectUris = {"somewhere"},
                 ClientSecrets =  new [] {new Secret("NotASecret".Sha256())},
                 AllowedGrantTypes = {GrantType.ResourceOwnerPassword},
-                    AccessTokenLifetime = 3600*24*30,
             }
         };
 

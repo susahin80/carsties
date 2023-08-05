@@ -58,6 +58,8 @@ public class AuctionController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<AuctionDto>> CreateAuction(CreateAuctionDto dto)
     {
+        Console.WriteLine("--> Auction service CreateAuction");
+
         var auction = _mapper.Map<Auction>(dto);
         auction.Seller = User.Identity.Name;
 
