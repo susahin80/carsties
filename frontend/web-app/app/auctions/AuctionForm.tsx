@@ -36,7 +36,7 @@ export default function AuctionForm({ auction }: Props) {
       reset({ make, model, color, mileage, year });
     }
     setFocus("make");
-  }, [setFocus, auction]);
+  }, [setFocus, auction, reset]);
 
   async function onSubmit(data: FieldValues) {
     try {
@@ -67,21 +67,21 @@ export default function AuctionForm({ auction }: Props) {
         name="make"
         control={control}
         rules={{ required: "Make is required" }}
-        showLabel={true}
+        showlabel={true}
       />
       <Input
         label="Model"
         name="model"
         control={control}
         rules={{ required: "Model is required" }}
-        showLabel={true}
+        showlabel={true}
       />
       <Input
         label="Color"
         name="color"
         control={control}
         rules={{ required: "Color is required" }}
-        showLabel={true}
+        showlabel={true}
       />
 
       <div className="grid grid-cols-2 gap-3">
@@ -91,7 +91,7 @@ export default function AuctionForm({ auction }: Props) {
           control={control}
           type="number"
           rules={{ required: "Year is required" }}
-          showLabel={true}
+          showlabel={true}
         />
         <Input
           label="Mileage"
@@ -99,7 +99,7 @@ export default function AuctionForm({ auction }: Props) {
           control={control}
           type="number"
           rules={{ required: "Model is required" }}
-          showLabel={true}
+          showlabel={true}
         />
       </div>
 
@@ -110,7 +110,7 @@ export default function AuctionForm({ auction }: Props) {
             name="imageUrl"
             control={control}
             rules={{ required: "Image URL is required" }}
-            showLabel={true}
+            showlabel={true}
           />
 
           <div className="grid grid-cols-2 gap-3">
@@ -120,7 +120,7 @@ export default function AuctionForm({ auction }: Props) {
               control={control}
               type="number"
               rules={{ required: "Reserve price is required" }}
-              showLabel={true}
+              showlabel={true}
             />
             <DateInput
               label="Auction end date/time"
@@ -129,7 +129,7 @@ export default function AuctionForm({ auction }: Props) {
               dateFormat="dd MMMM yyyy h:mm a"
               showTimeSelect
               rules={{ required: "Auction end date is required" }}
-              showLabel={true}
+              showlabel={true}
             />
           </div>
         </>

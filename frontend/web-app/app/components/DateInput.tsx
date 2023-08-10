@@ -7,7 +7,7 @@ import { Label } from "flowbite-react";
 type Props = {
   label: string;
   type?: string;
-  showLabel?: boolean;
+  showlabel?: boolean;
 } & UseControllerProps &
   Partial<ReactDatePickerProps>;
 
@@ -16,7 +16,7 @@ export default function DateInput(props: Props) {
 
   return (
     <div className="block">
-      {props.showLabel && (
+      {props.showlabel && (
         <div className="mb-2 block">
           <Label htmlFor={field.name} value={props.label} />
         </div>
